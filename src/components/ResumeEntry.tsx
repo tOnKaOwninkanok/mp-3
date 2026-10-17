@@ -1,29 +1,29 @@
 import styled from 'styled-components'
 
 const Entry = styled.section`
-  min-width: 0;
+  margin-bottom: 32px;
+
+  li + li {
+    margin-top: 8px;
+  }
 `
 
 type ResumeEntryProps = {
-  title: string
-  subtitle: string
-  details?: string[]
-  variant?: 'education' | 'experience'
+    title: string
+    subtitle: string
+    details?: string[]
 }
 
-export default function ResumeEntry({ title, subtitle, details, variant = 'education' }: ResumeEntryProps) {
-  const Title = variant === 'experience' ? 'h2' : 'h3'
-  const Subtitle = variant === 'experience' ? 'h3' : 'p'
-
-  return (
-    <Entry>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-      {details && (
-        <ul>
-          {details.map((detail) => <li key={detail}>{detail}</li>)}
-        </ul>
-      )}
-    </Entry>
-  )
+export default function ResumeEntry({ title, subtitle, details }: ResumeEntryProps) {
+    return (
+        <Entry>
+            <h3>{title}</h3>
+            <p>{subtitle}</p>
+            {details && (
+                <ul>
+                    {details.map((detail) => <li key={detail}>{detail}</li>)}
+                </ul>
+            )}
+        </Entry>
+    )
 }
