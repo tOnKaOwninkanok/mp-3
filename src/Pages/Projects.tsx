@@ -38,6 +38,7 @@ const ProjectDescription = styled.ul`
 export default function Projects() {
     return (
         <PageSection title="Project">
+            <Calculator />
             <section>
                 <ProjectTitle>Sales Dashboard</ProjectTitle>
                 <ProjectContent>
@@ -65,7 +66,6 @@ export default function Projects() {
                     </ProjectDescription>
                 </ProjectContent>
             </section>
-            <Calculator />
         </PageSection>
     )
 }
