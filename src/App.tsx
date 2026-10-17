@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout'
-import Home from './pages/Home'
-import Education from './pages/Education'
-import Experiences from './pages/Experiences'
-import Projects from './pages/Projects'
-import References from './pages/References'
-import Activities from './pages/Activities'
-import Credits from './pages/Credits'
-import NotFound from './pages/NotFound'
+import Home from './Pages/Home'
+import Education from './Pages/Education'
+import Experiences from './Pages/Experiences'
+import Projects from './Pages/Projects'
+import References from './Pages/References'
+import Activities from './Pages/Activities'
+import Credits from './Pages/Credits'
+import NotFound from './Pages/NotFound'
 
 // The layout is rendered once. Only its Outlet changes with the URL.
 const router = createBrowserRouter([
